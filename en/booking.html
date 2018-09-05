@@ -1,0 +1,347 @@
+<html lang="en">
+   
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="group snowboard lesson in Zell am See">
+    <meta name="description" content="Improve your skills, may it be snow plough turns, carving turns or technique for powder or moguls, you are on the right spot, our professional instructors will be there for you.">   
+    
+    <title>Book a lesson</title>
+    
+    <!-- Custom CSS -->
+    <link rel="shortcut icon" type="image/png" href="https://outdo.dk/ill/favicon_ski.png" />
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" type="text/css" href="../css/global.css">
+    <link rel="stylesheet" type="text/css" href="../css/booking.css">
+    <link rel="stylesheet" type="text/css" href="../css/w3.css">
+    <link rel="stylesheet" type="text/css" href="../css/global.css">
+    
+    
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+    
+    </head> 
+    
+<body>
+    <!-- Logo -->
+    <div class="center" style="padding-top: 20px;">
+    <a href="https://outdo.dk/"><img src="https://outdo.dk/ill/outdo_logo_black.png"></a>
+    </div>
+    
+    <h1 id="header" >Book a Lesson</h1>
+    <p id="text">Looking for a way to Outdo yourself?<br>Type in your criterias to book the lesson of a lifetime</p>
+    
+    <form>
+        <section id="step1">
+            <div class="row-three">
+                <div class="third">
+                    <div class="input-group">
+                        <select id="service" onchange="setType()" onchange name="service" required>
+                            <option></option> <!-- Doesn't empty parameter on selection -->
+                            <option>Kids Ski School</option>
+                            <option>Private Ski Lesson</option>
+                            <option>Private Snowboard Lesson</option>
+                        </select>
+                        <label>Lesson type</label>
+                    </div>
+                </div>
+                <div class="third">
+                    <div class="input-group">
+                        <select id="persons" onchange="setPersons()" name="persons" required>
+                            <option></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <label>Persons</label>
+                    </div>
+                </div>
+                <div class="third" id="sessionsdiv">
+                    <div class="input-group">
+                        <select id="sessions" onchange="setSessions()" name="sessions" required>
+                            <option></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <label>Sessions</label>
+                    </div>
+                </div>
+                <div class="third" id="datediv">
+                    <div class="input-group">
+                        <input id="date" onchange="setDate()" name="date" required>
+                        <label>Date</label>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="step2" class="w3-animate-opacity">
+            <div class="row-three" id="p1">
+                <h4>Participant 1</h4>
+                <div class="third">
+                    <div class="input-group">
+                        <input type="text" id="nam1" onchange="" required>
+                        <label>Name</label>
+                    </div>
+                </div>
+                <div class="third">
+                    <div class="input-group">
+                        <select id="a1" onchange="" required>
+                            <option value=""></option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                        </select>
+                        <label>Age</label>
+                    </div>
+                </div>
+                <div class="third">
+                    <div class="input-group">
+                        <select id="l1" onchange="" required>
+                            <option value=""></option>
+                            <option value="Beginner">Beginner</option>
+                            <option value="Recreational">Recreational</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Advanced">Advanced</option>
+                        </select>
+                        <label>Skiing Level</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row-three" id="p2">
+                <h4>Participant 2</h4>
+                <div class="third">
+                    <div class="input-group">
+                        <input type="text" id="n2" onchange="" required>
+                        <label>Name</label>
+                    </div>
+                </div>
+                <div class="third">
+                    <div class="input-group">
+                        <input type="num" id="a2" onchange="" required>
+                        <label>Age</label>
+                    </div>
+                </div>
+                <div class="third">
+                    <div class="input-group">
+                        <select id="l2" onchange="" required>
+                            <option value=""></option>
+                            <option value="Beginner">Beginner</option>
+                            <option value="Recreational">Recreational</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Advanced">Advanced</option>
+                        </select>
+                        <label>Skiing Level</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row-three" id="p3">
+                <h4>Participant 3</h4>
+                <div class="third">
+                    <div class="input-group">
+                        <input type="text" id="n3" onchange="" required>
+                        <label>Name</label>
+                    </div>
+                </div>
+                <div class="third">
+                    <div class="input-group">
+                        <input id="a3" onchange="" required>
+                        <label>Age</label>
+                    </div>
+                </div>
+                <div class="third">
+                    <div class="input-group">
+                        <select id="l3" onchange="" required>
+                            <option value=""></option>
+                            <option value="Beginner">Beginner</option>
+                            <option value="Recreational">Recreational</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Advanced">Advanced</option>
+                        </select>
+                        <label>Skiing Level</label>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    
+        <section>
+            <a class="btn back_btn" onclick="back()">Back</a>
+            <a class="btn next_btn" onclick="next()">Next</a>
+        </section>
+    
+    
+    
+        <!--
+        <section id="details">
+            <h4 style="color: black; font-weight: bold;">Participant information</h4>
+        
+            <div class="p-box" id="p1">
+                <p>Participant 1</p>
+                <div class="row-three">
+                    <div class="third">
+                        <div class="input-group">
+                            <input type="text" id="name1" required>
+                            <label>Name</label>
+                        </div>
+                    </div>
+                    <div class="third">
+                        <div class="input-group">
+                            <select id="age1" required>
+                                <option value=""></option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                            </select>
+                            <label>Age</label>
+                        </div>
+                    </div>
+                    <div class="third">
+                        <div class="input-group">
+                            <select id="level1" required>
+                                <option value=""></option>
+                                <option value="Beginner">Beginner</option>
+                                <option value="Recreational">Recreational</option>
+                                <option value="Intermediate">Intermediate</option>
+                                <option value="Advanced">Advanced</option>
+                            </select>
+                            <label>Skiing Level</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="p-box" id="p2">
+                <p>Participant 2</p>
+                <div class="row-three">
+                    <div class="third">
+                        <div class="input-group">
+                            <input type="text" id="name2" required>
+                            <label>Name</label>
+                        </div>
+                    </div>
+                    <div class="third">
+                        <div class="input-group">
+                            <select id="age2" required>
+                                <option value=""></option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                            </select>
+                            <label>Age</label>
+                        </div>
+                    </div>
+                    <div class="third">
+                        <div class="input-group">
+                            <select id="level2" required>
+                                <option value=""></option>
+                                <option value="Beginner">Beginner</option>
+                                <option value="Recreational">Recreational</option>
+                                <option value="Intermediate">Intermediate</option>
+                                <option value="Advanced">Advanced</option>
+                            </select>
+                            <label>Skiing Level</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div id="c1">
+                <h4 style="padding-top: 60px; color: black; font-weight: bold;">Contact Details</h4>
+                <div class="c-box">
+        
+                    <div class="half">
+                        <div class="input-group">
+                            <input type="text" required>
+                            <label>First name</label>
+                        </div>
+                    </div>
+                    <div class="half">
+                        <div class="input-group">
+                            <input type="email" required>
+                            <label>Email</label>
+                        </div>
+                    </div>
+                    <div class="half">
+                        <div class="input-group">
+                            <input type="tel" required>
+                            <label>Phone number</label>
+                        </div>
+                    </div>
+                    <div class="half">
+                        <div class="input-group">
+                            <input type="nationality" required>
+                            <label>Nationality</label>
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+        
+        
+        
+        </section>
+                -->
+    
+    </form>
+    
+    
+    
+    <!-- Jquery -->
+    <script>
+        // create datepicker
+        jQuery(document).ready(function() {
+            jQuery('#date').datepicker({
+	           minDate: new Date(2018, 10, 1),
+	           maxDate: new Date(2019, 3, 15),
+	           dateFormat: 'DD, MM, d, yy',
+	           constrainInput: true,
+	           beforeShowDay: function(date){ 
+                var day = date.getDay(); 
+                return [day == 0,""];
+                }
+            });
+        });
+    </script>
+
+    <!-- Javascript -->
+    <script src="../js/booking.js"></script>   
+    
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+footer {
+    color: white;
+    padding: 50px;
+}
+
+footer .third {
+    padding: 20px
+}
+
+footer img {
+    padding-bottom: 40px;
+}
+
+footer .row {
+    margin: 20px;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+
+footer i {
+    margin-right: 5px;
+    height: 100%;
+}
+
+footer p {
+    font-size: 1rem;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    
+}
+
+footer .row {
+    max-width: 800px;
+    margin: auto;
+}
+
+footer .row {
+    max-width: 800px;
+    margin: auto;
+}
+
+footer .social i {
+    margin: 20px 10px;
+}
+
+

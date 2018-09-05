@@ -1,0 +1,145 @@
+header {
+    margin: 0; 
+    padding: 0;
+}
+
+.dark {
+    background-color: rgba(0,0,0,1);
+    background-size: cover;
+}
+
+.logo {
+    position: fixed; 
+    left: 50%;
+    top: 25px;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+
+#navbar {
+    position:fixed;
+    width:100%;
+    z-index:2;
+    color: #fff;
+    text-align: right;
+    padding: 35px 20px;
+    
+}
+
+#sidebar {
+    display:none;
+    padding-top:150px; 
+    z-index: 2;
+}
+
+
+#navbar i{
+    margin-right: 22px;
+}
+
+#navbar a:first-child {
+    font-size: 14px;
+    text-decoration: none;
+    margin-left: 30px;
+}
+
+
+#navbar a {
+    font-size: 14px;
+    text-decoration: none;
+    margin-left: 30px;
+}
+
+#navbar a:nth-child(6) {
+    background-color: #61ce70;
+    border-radius: 20px;
+    padding: 10px 20px 10px 20px;
+}
+
+
+
+/* SCREEN - XL ----------- */
+@media (min-width:600px) and (max-width:1400px) {
+    
+    .logo {
+    transform: translateX(0%);
+    left: 50px;
+    
+    }
+
+    #navbar {
+        padding-right: 50px;
+    }
+}
+
+/* SCREEN - XL ----------- */
+@media (min-width:1400px) {
+    
+
+    #navbar {
+        padding-right: 70px;
+    }
+}
+
+ul {
+    font-size: 18px;
+    
+}
+
+.languagepicker {
+	background-color: #FFF;
+	display: inline-block;
+	padding: 0;
+	height: 40px;
+	overflow: hidden;
+	transition: all .3s ease;
+	margin: 50px;
+	vertical-align: top;
+	float: center;
+}
+
+.languagepicker:hover {
+	/* don't forget the 1px border */
+	height: 81px;
+}
+
+.languagepicker a{
+	color: #000;
+	text-decoration: none;
+}
+
+.languagepicker li {
+	display: block;
+	padding: 0px 20px;
+	line-height: 40px;
+	border-top: 1px solid #EEE;
+}
+
+.languagepicker li:hover{
+	background-color: #EEE;
+}
+
+.languagepicker a:first-child li {
+	border: none;
+	background: #FFF !important;
+}
+
+.languagepicker li img {
+	float: left;
+    margin-top: 15px;
+}
+
+.roundborders {
+	border-radius: 5px;
+}
+
+.large:hover {
+	/* 
+	don't forget the 1px border!
+	The first language is 40px heigh, 
+	the others are 41px
+	*/
+	height: 245px;
+}
+

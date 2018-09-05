@@ -1,0 +1,447 @@
+
+/* ----- GLOBAL ----- */
+body, header, h1,h2,h3,h4,h5,h6,p {font-family: 'Poppins', sans-serif;}
+
+body #main {
+    line-height: 1.5;
+    background: repeating-linear-gradient(
+        45deg,
+        #2e2e2e,
+        #000000 10px,
+        #000000 10px,
+        #1f1f21 15px
+    );
+    
+}
+
+.pv20 {
+    padding: 20px 0;
+}
+
+.center {
+    text-align: center;
+    
+}
+
+.bg-white {
+    background-color: #fff;
+}
+
+.svg-t{    
+    transform: rotate(180deg);
+}
+
+.svg-b{    
+    
+}
+
+.svg-container-t {
+    position: relative;
+    margin-top: -1px;
+    
+}
+
+.svg-container-b {
+    position: relative;
+    transform: rotate(180deg);
+    margin-bottom: -5px;
+    
+}
+
+.stretcher-bar {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.content-svg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+section {
+    max-width: 1100px;
+    padding: 56px 16px;
+    margin: auto;
+    
+}
+
+.section {
+    padding: 56px 16px; 
+    max-width: 1100px; 
+    margin: auto;
+}
+
+.spacer {
+    margin: 75px 0;
+}
+
+
+.wide-section{
+    padding:56px 16px; 
+    max-width: 1600px; 
+    margin: auto;
+}
+    
+.title{
+    font-size: 68px;
+    text-align: center;
+    font-weight: bold;
+}   
+    
+.subtitle{
+    font-size: 26px;
+    text-align: center;
+    font-weight: 400;
+} 
+
+.bread{
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 8px;
+}
+
+.icon {
+    width: 300px;
+    display:block;
+    margin:auto;
+    margin-top: -180px;
+    position: relative;
+}
+  
+
+/* ----- TEXT STYLING ----- */
+
+
+h3 {
+    font-weight: bold;
+}
+
+h4 {
+    font-weight: normal;
+}
+
+@media (min-width: 1200px) {
+   
+    h3 {font-size: 4rem;}
+    h4 {font-size: 1.6rem;}
+    h5 {font-size: 1.5rem;}
+    h6 {font-size: 1rem;}
+    
+    #service h2 {font-size: 3rem;}
+    #service h3 {font-size: 2.5rem;}
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {
+    
+    h3 {font-size: 3rem;}
+    h4 {font-size: 1.5rem;}
+    h5 {font-size: 1.4rem;}
+    h6 {font-size: 1rem;}
+    
+    #service h2 {font-size: 2.5rem;}
+    #service h3 {font-size: 2.25rem;}
+}
+
+@media (min-width: 600px) and (max-width: 800px) {
+    
+    h3 {font-size: 3rem;}
+    h4 {font-size: 1.4rem;}
+    h5 {font-size: 1.3rem;}
+    h6 {font-size: 1rem;}
+    
+    #service h2 {font-size: 2.4rem;}
+    #service h3 {font-size: 2rem;}
+    
+}
+
+@media (min-width: 400px) and (max-width: 600px) {
+    
+    h3 {font-size: 2.5rem;}
+    h4 {font-size: 1.3rem;}
+    h5 {font-size: 1.2rem;}
+    h6 {font-size: 1rem;}
+    
+    #service h2 {font-size: 2.2rem;}
+    #service h3 {font-size: 1.5rem;}
+    
+}
+
+@media (max-width: 400px) {
+    
+    h3 {font-size: 2rem;}
+    h4 {font-size: 1.2rem;}
+    h5 {font-size: 1.1rem;}
+    h6 {font-size: 0.8rem;}
+    
+    #service h2 {font-size: 2rem;}
+    #service h3 {font-size: 1.2rem;}
+    
+}
+
+.w3-bar .w3-button {
+    padding: 16px;
+}
+
+.btn_green {
+    padding: 20px 30px 20px 30px;
+    color: white;
+    background-color: #61ce70;
+    border-radius: 50px;
+    border: none;
+    text-transform: uppercase;
+    font-size: 0.8rem;  
+}  
+     
+.btn_white {
+    padding: 17px 27px 17px 27px;
+    color: white;
+    background-color: transparent;
+    border-radius: 50px;
+    border-width: 3px;
+    border-color: #fff;
+    text-transform: uppercase;
+    font-size: 0.8rem;  
+} 
+
+.btn_blue {
+    align-content: center;
+    padding: 20px 30px 20px 30px;
+    color: white;
+    background-color: #0178bc;
+    border-radius: 50px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;  
+} 
+
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.pt50 {
+    padding-top: 50px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.card:hover{
+    cursor: pointer;
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+.left {
+    float:left;
+    width:100%;   
+}
+
+
+.half-mob,.third-mob,.twothird-mob,.threequarter-mob,.quarter-mob{float:left;width:100%;}
+
+.third-mob {
+    width: calc((100% - 30px) / 3);
+}
+
+.twothird-mob {
+    width: 66%;
+}
+
+.half, .third, .quarter {
+    float: left;
+    width: 100%;
+}
+
+
+
+@media (min-width:800px){
+    .quarter{width: calc((100% - 0px) / 4);}
+    .third{width: calc((100% - 0px) / 3);}
+    .half {width: calc((100% - 0px) / 2);}   
+}
+ 
+
+
+@media (max-width:600px){
+ 
+
+.title{
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: -2.5px;
+    
+}   
+    
+.subtitle{
+    font-size: 20px;
+    text-align: center;
+    font-weight: 400;
+} 
+
+}
+
+
+/* ----- HEADER ----- */
+header {
+    margin: 0; 
+    padding: 0;
+}
+
+
+.dark {
+    background-color: rgba(0,0,0,1);
+    background-size: cover;
+}
+
+.logo {
+    /*position: fixed;*/ 
+    position: absolute;
+    left: 50%;
+    top: 32px;
+    transform: translateX(-50%);
+    z-index: 10;
+    height: 50px;
+}
+
+.hamburger {
+    /*position: fixed;*/ 
+    position: absolute;
+    right: 10px;
+    top: 33px;
+}
+
+
+
+#navbar {
+    /*position:fixed;*/
+    position: absolute;
+    width:100%;
+    z-index:2;
+    color: #fff;
+    text-align: right;
+    padding: 50px 20px;
+    font-weight: bold;
+    
+}
+
+#sidebar {
+    display:none;
+    padding-top:100px; 
+    z-index: 2;
+}
+
+
+#navbar i{
+    margin-right: 22px;
+}
+
+#navbar a:first-child {
+    font-size: 14px;
+    text-decoration: none;
+    margin-left: 30px;
+}
+
+
+#navbar a {
+    font-size: 14px;
+    text-decoration: none;
+    margin-left: 30px;
+}
+
+
+@media (min-width:600px) and (max-width:1400px) {
+    
+    .logo {
+    transform: translateX(0%);
+    left: 50px;
+    
+    }
+
+    #navbar {
+        padding-right: 50px;
+    }
+}
+
+@media (min-width:1400px) {
+    
+
+    #navbar {
+        padding-right: 70px;
+    }
+}
+
+ul {
+    font-size: 18px;
+    
+}
+
+.languagepicker {
+	background-color: #FFF;
+	display: inline-block;
+	padding: 0;
+	height: 40px;
+	overflow: hidden;
+	transition: all .3s ease;
+	margin: 50px;
+	vertical-align: top;
+	float: center;
+}
+
+.languagepicker:hover {
+	/* don't forget the 1px border */
+	height: 81px;
+}
+
+.languagepicker a{
+	color: #000;
+	text-decoration: none;
+}
+
+.languagepicker li {
+	display: block;
+	padding: 0px 20px;
+	line-height: 40px;
+	border-top: 1px solid #EEE;
+}
+
+.languagepicker li:hover{
+	background-color: #EEE;
+}
+
+.languagepicker a:first-child li {
+	border: none;
+	background: #FFF !important;
+}
+
+.languagepicker li img {
+	float: left;
+    margin-top: 15px;
+}
+
+.roundborders {
+	border-radius: 5px;
+}
+
+.large:hover {
+	/* 
+	don't forget the 1px border!
+	The first language is 40px heigh, 
+	the others are 41px
+	*/
+	height: 245px;
+}

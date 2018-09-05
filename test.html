@@ -1,0 +1,39 @@
+<!-- Filename : index.html -->
+<!Doctype html>
+<html lang = "en-US">
+  <head>
+    <title>Show div after 100px scroll</title> 
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script>
+        //Filename : script.js 
+window.addEventListener("scroll",function(){
+ 
+  var x = document.getElementById('scroll-header');   
+    
+  if(window.pageYOffset > 500){
+   x.style.display = "block"; 
+  }
+  else if(window.pageYOffset < 500){
+    x.style.display = "none";
+  }
+},false);  
+    </script>
+  </head> 
+   <body id="service">
+       <div id="header">
+            <div class="logo">
+                <img src="ill/outdo_logo_black.png">
+            </div>
+            <div class="product">
+                <h3>Kids Ski School</h3>
+            </div>
+            <div class="price">
+                Price from: <b>44 EUR per day</b>
+            </div>
+            <div class="book">
+                <a>BOOK</a>
+            </div>
+        </div>
+       
+   </body> 
+</html>
