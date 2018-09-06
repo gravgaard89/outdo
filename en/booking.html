@@ -1,44 +1,44 @@
 <html lang="en">
-   
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="group snowboard lesson in Zell am See">
-    <meta name="description" content="Improve your skills, may it be snow plough turns, carving turns or technique for powder or moguls, you are on the right spot, our professional instructors will be there for you.">   
-    
+    <meta name="description" content="Improve your skills, may it be snow plough turns, carving turns or technique for powder or moguls, you are on the right spot, our professional instructors will be there for you.">
+
     <title>Book a lesson</title>
-    
+
     <!-- Custom CSS -->
     <link rel="shortcut icon" type="image/png" href="https://outdo.dk/ill/favicon_ski.png" />
-    
+
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+
     <link rel="stylesheet" type="text/css" href="../css/global.css">
     <link rel="stylesheet" type="text/css" href="../css/booking.css">
     <link rel="stylesheet" type="text/css" href="../css/w3.css">
     <link rel="stylesheet" type="text/css" href="../css/global.css">
-    
-    
+
+
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    
-    
-    </head> 
-    
+
+
+</head>
+
 <body>
     <!-- Logo -->
     <div class="center" style="padding-top: 20px;">
-    <a href="https://outdo.dk/"><img src="https://outdo.dk/ill/outdo_logo_black.png"></a>
+        <a href="https://outdo.dk/"><img src="https://outdo.dk/ill/outdo_logo_black.png"></a>
     </div>
-    
-    <h1 id="header" >Book a Lesson</h1>
+
+    <h1 id="header">Book a Lesson</h1>
     <p id="text">Looking for a way to Outdo yourself?<br>Type in your criterias to book the lesson of a lifetime</p>
-    
+
     <form>
-        <section id="step1">
+        <section id="step1" style="display:none">
             <div class="row-three">
                 <div class="third">
                     <div class="input-group">
@@ -85,38 +85,25 @@
                 </div>
             </div>
         </section>
-        
-        <section id="step2" class="w3-animate-opacity">
+
+        <section id="step2" class="w3-animate-opacity" style="display:none">
             <div class="row-three" id="p1">
                 <h4>Participant 1</h4>
                 <div class="third">
                     <div class="input-group">
-                        <input type="text" id="nam1" onchange="" required>
+                        <input type="text" id="n1" onchange="setName()" required>
                         <label>Name</label>
                     </div>
                 </div>
                 <div class="third">
                     <div class="input-group">
-                        <select id="a1" onchange="" required>
-                            <option value=""></option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
-                            <option value="13">13</option>
-                            <option value="14">14</option>
-                        </select>
+                        <input type="num" id="a1" onchange="setAge()" required>
                         <label>Age</label>
                     </div>
                 </div>
                 <div class="third">
                     <div class="input-group">
-                        <select id="l1" onchange="" required>
+                        <select id="l1" onchange="setLevel()" required>
                             <option value=""></option>
                             <option value="Beginner">Beginner</option>
                             <option value="Recreational">Recreational</option>
@@ -131,19 +118,19 @@
                 <h4>Participant 2</h4>
                 <div class="third">
                     <div class="input-group">
-                        <input type="text" id="n2" onchange="" required>
+                        <input type="text" id="n2" onchange="setName()" required>
                         <label>Name</label>
                     </div>
                 </div>
                 <div class="third">
                     <div class="input-group">
-                        <input type="num" id="a2" onchange="" required>
+                        <input type="num" id="a2" onchange="setAge()" required>
                         <label>Age</label>
                     </div>
                 </div>
                 <div class="third">
                     <div class="input-group">
-                        <select id="l2" onchange="" required>
+                        <select id="l2" onchange="setLevel()" required>
                             <option value=""></option>
                             <option value="Beginner">Beginner</option>
                             <option value="Recreational">Recreational</option>
@@ -158,19 +145,73 @@
                 <h4>Participant 3</h4>
                 <div class="third">
                     <div class="input-group">
-                        <input type="text" id="n3" onchange="" required>
+                        <input type="text" id="n3" onchange="setName()" required>
                         <label>Name</label>
                     </div>
                 </div>
                 <div class="third">
                     <div class="input-group">
-                        <input id="a3" onchange="" required>
+                        <input id="a3" onchange="setAge()" required>
                         <label>Age</label>
                     </div>
                 </div>
                 <div class="third">
                     <div class="input-group">
-                        <select id="l3" onchange="" required>
+                        <select id="l3" onchange="setLevel()" required>
+                            <option value=""></option>
+                            <option value="Beginner">Beginner</option>
+                            <option value="Recreational">Recreational</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Advanced">Advanced</option>
+                        </select>
+                        <label>Skiing Level</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row-three" id="p4">
+                <h4>Participant 4</h4>
+                <div class="third">
+                    <div class="input-group">
+                        <input type="text" id="n4" onchange="setName()" required>
+                        <label>Name</label>
+                    </div>
+                </div>
+                <div class="third">
+                    <div class="input-group">
+                        <input id="a4" onchange="setAge()" required>
+                        <label>Age</label>
+                    </div>
+                </div>
+                <div class="third">
+                    <div class="input-group">
+                        <select id="l4" onchange="setLevel()" required>
+                            <option value=""></option>
+                            <option value="Beginner">Beginner</option>
+                            <option value="Recreational">Recreational</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Advanced">Advanced</option>
+                        </select>
+                        <label>Skiing Level</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row-three" id="p5">
+                <h4>Participant 5</h4>
+                <div class="third">
+                    <div class="input-group">
+                        <input type="text" id="n5" onchange="setName()" required>
+                        <label>Name</label>
+                    </div>
+                </div>
+                <div class="third">
+                    <div class="input-group">
+                        <input id="a5" onchange="setAge()" required>
+                        <label>Age</label>
+                    </div>
+                </div>
+                <div class="third">
+                    <div class="input-group">
+                        <select id="l5" onchange="setLevel()" required>
                             <option value=""></option>
                             <option value="Beginner">Beginner</option>
                             <option value="Recreational">Recreational</option>
@@ -182,15 +223,124 @@
                 </div>
             </div>
         </section>
-    
-    
+
+        <section id="step3" class="w3-animate-opacity" style="display:block">
+            <div class="row-three" id="s1">
+                <h4>Session 1</h4>
+                <div class="third">
+                    <div class="input-group">
+                        <input type="text" id="d1" class="datepicker" onchange="setSessionDate()" required>
+                        <label>Date</label>
+                    </div>
+                </div>
+                <div class="third">
+                    <div class="input-group">
+                        <select type="text" id="tf1" onchange="setFromTime()" required>
+                            <option>09:00</option>
+                            <option>10:00</option>
+                            <option>11:00</option>
+                            <option>12:00</option>
+                            <option>13:00</option>
+                            <option>14:00</option>
+                        </select>
+                        <label>From</label>
+                    </div>
+                </div>
+                <div class="third">
+                    <div class="input-group">
+                        <select type="text" id="tt1" onchange="setToTime()" required>
+                            <option>11:00</option>
+                            <option>12:00</option>
+                            <option>13:00</option>
+                            <option>14:00</option>
+                            <option>15:00</option>
+                            <option>16:00</option>
+                        </select>
+                        <label>To</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row-three" id="s2">
+                <h4>Session 2</h4>
+                <div class="third">
+                    <div class="input-group">
+                        <input type="text" id="d2" class="datepicker" onchange="setSessionDate()" required>
+                        <label>Date</label>
+                    </div>
+                </div>
+                <div class="third">
+                    <div class="input-group">
+                        <select type="text" id="tf2" onchange="setFromTime()" required>
+                            <option>09:00</option>
+                            <option>10:00</option>
+                            <option>11:00</option>
+                            <option>12:00</option>
+                            <option>13:00</option>
+                            <option>14:00</option>
+                        </select>
+                        <label>From</label>
+                    </div>
+                </div>
+                <div class="third">
+                    <div class="input-group">
+                        <select type="text" id="tt2" onchange="setToTime()" required>
+                            <option>11:00</option>
+                            <option>12:00</option>
+                            <option>13:00</option>
+                            <option>14:00</option>
+                            <option>15:00</option>
+                            <option>16:00</option>
+                        </select>
+                        <label>To</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row-three" id="s3">
+                <h4>Session 3</h4>
+                <div class="third">
+                    <div class="input-group">
+                        <input type="text" id="d3" class="datepicker" onchange="setSessionDate()" required>
+                        <label>Date</label>
+                    </div>
+                </div>
+                <div class="third">
+                    <div class="input-group">
+                        <select type="text" id="tf3" onchange="setFromTime()" required>
+                            <option>09:00</option>
+                            <option>10:00</option>
+                            <option>11:00</option>
+                            <option>12:00</option>
+                            <option>13:00</option>
+                            <option>14:00</option>
+                        </select>
+                        <label>From</label>
+                    </div>
+                </div>
+                <div class="third">
+                    <div class="input-group">
+                        <select type="text" id="tt3" onchange="setToTime()" required>
+                            <option>11:00</option>
+                            <option>12:00</option>
+                            <option>13:00</option>
+                            <option>14:00</option>
+                            <option>15:00</option>
+                            <option>16:00</option>
+                        </select>
+                        <label>To</label>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
         <section>
             <a class="btn back_btn" onclick="back()">Back</a>
             <a class="btn next_btn" onclick="next()">Next</a>
         </section>
-    
-    
-    
+
+
+
         <!--
         <section id="details">
             <h4 style="color: black; font-weight: bold;">Participant information</h4>
@@ -317,31 +467,31 @@
         
         </section>
                 -->
-    
+
     </form>
-    
-    
-    
+
+
+
     <!-- Jquery -->
     <script>
         // create datepicker
-        jQuery(document).ready(function() {
-            jQuery('#date').datepicker({
-	           minDate: new Date(2018, 10, 1),
-	           maxDate: new Date(2019, 3, 15),
-	           dateFormat: 'DD, MM, d, yy',
-	           constrainInput: true,
-	           beforeShowDay: function(date){ 
-                var day = date.getDay(); 
-                return [day == 0,""];
+        jQuery(document).ready(function () {
+            jQuery('.datepicker').datepicker({
+                minDate: new Date(2018, 10, 1),
+                maxDate: new Date(2019, 3, 15),
+                dateFormat: 'DD, MM, d, yy',
+                constrainInput: true,
+                beforeShowDay: function (date) {
+                    var day = date.getDay();
+                    return [day == 0, ""];
                 }
             });
         });
     </script>
 
     <!-- Javascript -->
-    <script src="../js/booking.js"></script>   
-    
+    <script src="../js/booking.js"></script>
+
 </body>
 
 </html>
