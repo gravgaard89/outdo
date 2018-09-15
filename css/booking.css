@@ -1,29 +1,145 @@
+#step1, #step2, #step3, #step4 {
+    padding-top: 0;
+}
+
 h1 {
     text-align: center; 
     padding-top: 100px; 
     font-size: 60px;
 }
 
-p {
+#text {
     text-align: center;
     margin: 50px 0;
 }
+
+
 
 .input-group {
     position: relative;
     
 }
 
+input[type=radio] {
+    font-size: 18px;
+    padding-left: 12px;
+    width: 20px;
+    border: none;
+    /* border-bottom: 1px solid #757575; */
+    height: 20px;
+    -webkit-appearance: radio;
+    -moz-appearance: radio;
+    -webkit-box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.0);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    5px 5px 20px 5px rgba(0,0,0,0.0);  /* Firefox 3.5 - 3.6 */
+    background-color: white;
+
+} 
+
+
+
+.radio table {
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.radio table td:nth-child(1) {
+    padding-right: 20px;
+}
+
+@media (max-width: 910px) {
+    .radio table td:nth-child(1) {
+        padding-right: 00px;
+    }
+}
+
+.radio p {
+    margin: 0; 
+    font-weight: bold;
+}
+
+/* ---------- Radio Styling ---------- */
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+
+
 input, select { 
     font-size: 18px;
-    padding: 10px 10px 10px 5px;
+    padding-left: 12px;
     width: 100%;
     border: none;
     /* border-bottom: 1px solid #757575; */
     height: 50px;
     -webkit-appearance:none;
+    -moz-appearance:none;
     -webkit-box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.10);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
     -moz-box-shadow:    5px 5px 20px 5px rgba(0,0,0,0.10);  /* Firefox 3.5 - 3.6 */
+    background-color: white;
+}
+
+.radio label {
+    pointer-events: all
 }
 
 input:focus, select:focus  {
@@ -32,12 +148,12 @@ input:focus, select:focus  {
 
 label {
     color: #999;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: normal;
     position: absolute;
     pointer-events: none;
-    left: 5px;
-    top: 10px;
+    left: 12px;
+    top: 12px;
     transition: 0.2s ease all;
     -moz-transition: 0.2s ease all;
     -webkit-transition: 0.2s ease all;
@@ -47,7 +163,8 @@ input:focus ~ label,
 input:valid ~ label,
 select:focus ~ label,
 select:valid ~ label{
-    top: -20px;
+    top: -25px;
+    left: 0px;
     font-size: 14px;
     color: #0178bc;
     font-weight: bold;
@@ -111,6 +228,9 @@ select:valid ~ label{
     background-color: #ca6565; 
 }
 
+#back_btn {
+    display: none;
+}
 
 .next_btn {
     color: #0e7cf4;
@@ -124,24 +244,27 @@ select:valid ~ label{
 
 /* ----- Booking ----- */
 @media (max-width: 800px) {    
+    h1 {
+        font-size: 20px;
+        padding-top: 20px;
+    } 
+    
+    #text {
+        text-align: center;
+        margin: 20px 0 0 0;
+    }
+
     label { 
     font-size: 12px;
-    left: 5px;
-    top: 10px;
-   
     }
     
     input, select {
-    padding: 0px 0px 0px 5px;
-    font-size: 1px;
-    width: 100%;
-    border: none;
-    height: 40px;
+        height: 40px;
     }
     
     #finish {
-    width: 100%;
-}
+    width: 100%;   
+    }
     
 }
 
@@ -152,12 +275,6 @@ select:valid ~ label{
 
 
 /* ---------- Details ---------- */
-
-
-#p1, #p2, #p3 {
-    display: none;
-}
-
 
 .p-box {
     overflow: auto; 
@@ -195,7 +312,9 @@ select:valid ~ label{
         padding-top: 30px;
     }
     
-    
+    .radio table {
+        padding-top: 10px;
+    }
     
 }
 
@@ -282,7 +401,12 @@ select:valid ~ label{
 }
 
 
-
+#booking h4{
+    font-size: 16px;
+    padding-top: 0px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
 
 /* ---------- Row padding ---------- */
 
@@ -295,15 +419,39 @@ select:valid ~ label{
 }
 
 .row-three .third:nth-child(2) {
-    padding: 0 30px;
+    padding: 0 30px;  
 }
 
+.row-three .quarter:nth-child(2) {
+    padding: 0 30px;  
+}
+
+.row-three {
+    background-image: linear-gradient(#f8faff,#f6f8fe); padding: 40px 20px; overflow: auto; border-radius: 10px;
+}
 
 @media (max-width: 800px) {
     
     .row-two .half:nth-child(1), .row-two .half:nth-child(2) {padding-right: 0px; padding-left: 0px;}
     .row-three .third:nth-child(2) {padding: 30px 0 0 0;}  
-     
+    .row-three .quarter:nth-child(2) {padding: 30px 0 30px 0;}
+    .row-three .quarter:nth-child(1) {padding: 30px 0 0 0;}
+    
+    .radio table td:nth-child(1) {
+        padding-right: 20px;
+    }
+
+    .row-three {
+        background-image: linear-gradient(#f8faff,#f6f8fe); 
+        padding: 10px 20px 20px 20px; 
+        overflow: auto; 
+        border-radius: 10px;
+    }
+
+    td {
+        font-size: 12px;
+    }
+
 }
 
 
@@ -313,10 +461,98 @@ select:valid ~ label{
     display: none;
 }
 
+#step1 {
+    display: block;
+}
+
 #step2 {
     display: none;
 }
 
 #step3 {
     display: none;
+}
+
+#step4 {
+    display: none;
+}
+
+#step5 {
+    display: none;
+}
+
+/* ---------- STEP 4 ---------- */
+#checkout {
+    background-image: linear-gradient(#f8faff,#f4f7fd); 
+    padding: 20px 20px 20px 20px; 
+    overflow: auto; 
+    border-radius: 10px;
+}
+
+#checkout h2 {
+    margin-bottom: 10px;
+}
+
+#checkout h6 {
+    margin: 0;
+}
+
+#checkout p {
+    margin: 0;
+}
+
+#checkout table {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#checkout table th {
+    text-align: left;
+    font-size: 12px;
+}
+
+#checkout #datetable td:nth-child(even) {
+    float: left;
+}
+
+#checkout #persontable td:nth-child(1) {
+    
+    
+}
+
+#checkout #persontable td:nth-child(2) {
+    
+}
+
+#checkout #persontable td:nth-child(3) {
+    
+}
+
+
+
+#checkout #white-bg {
+    background-color: white;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+    -webkit-appearance:none;
+    -webkit-box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.10);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    5px 5px 20px 5px rgba(0,0,0,0.10);  /* Firefox 3.5 - 3.6 */
+
+}
+
+#checkout #white-bg table td:nth-child(1) {
+    width: 30%;
+}
+
+#checkout #white-bg table td:nth-child(2) {
+    padding-left: 20px;
+}
+
+#checkout img {
+    width: 100%;
+}
+
+@media (min-width: 800px) {
+    
 }

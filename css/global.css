@@ -2,7 +2,7 @@
 /* ----- GLOBAL ----- */
 body, header, h1,h2,h3,h4,h5,h6,p {font-family: 'Poppins', sans-serif;}
 
-body #main {
+html #index {
     line-height: 1.5;
     background: repeating-linear-gradient(
         45deg,
