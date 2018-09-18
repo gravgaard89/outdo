@@ -111,12 +111,15 @@ function setPersons() {
             level: "",
             days: ""
         };
-
     }
 
     for (j = 5; j > persons; j--) {
         document.getElementById("p" + j).style.display = "none";
         delete person[j];
+        document.getElementById("pn" + j).innerHTML = "";
+        document.getElementById("pa" + j).innerHTML = "";
+        document.getElementById("pl" + j).innerHTML = "";
+        document.getElementById("pd" + j).innerHTML = "";
     }
 
     if (lesson.size == 1) {
