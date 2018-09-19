@@ -242,6 +242,16 @@ select:valid ~ label{
     background-color: #0e7cf4;
 }
 
+.submit_btn {
+    color: #ff00ea;
+    margin: 0 auto;
+}
+
+.submit_btn:hover {
+    color: white;
+    background-color:#ff00ea;;
+}
+
 /* ----- Booking ----- */
 @media (max-width: 800px) {    
     h1 {

@@ -47,8 +47,10 @@ function setType() {
     }
     
     if (lesson.type == "Group") {
+
         datediv.style.display = "block";
         sessionsdiv.style.display = "none";
+        
         
         document.getElementById("pft1").innerHTML = "10:00";
         document.getElementById("pft2").innerHTML = "10:00";
@@ -67,6 +69,7 @@ function setType() {
     }
     
     if (lesson.type == "Private") {
+        document.getElementById('date').required = false;
         datediv.style.display = "none";
         sessionsdiv.style.display = "block";
         document.getElementById("sessions-header").innerHTML = "Sessions"
