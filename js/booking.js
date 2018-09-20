@@ -227,7 +227,6 @@ function setDays() {
     
     for (i = 1; i <= lesson.size; i++) {
         if (lesson.type == "Group") {
-            alert("Group");
             if (document.getElementById("r" + i).checked) {
                 person[i].days = "3 days";
             } else {
@@ -292,13 +291,15 @@ function setToTime() {
 
 function next() {
     var back_btn = document.getElementById("back_btn");
-
+    var next_btn = document.getElementById("next_btn");
+    var submit_btn = document.getElementById("submit_btn");
+    
     var step1 = document.getElementById("step1");
     var step2 = document.getElementById("step2");
     var step3 = document.getElementById("step3");
     var step4 = document.getElementById("step4");
     var step5 = document.getElementById("step5");
-
+    
     if (step1.style.display != "none" && lesson.type == "Group" && lesson.size != "" && lesson.date != "" || step1.style.display != "none" && lesson.type == "Private" && lesson.size != "" && lesson.sessions != "") {
         //alert("Contact details is shown");
         step1.style.display = "none";
@@ -321,14 +322,19 @@ function next() {
         setDays();
         step3.style.display = "none";
         step5.style.display = "block";
+        submit_btn.style.display = "block";
+        next_btn.style.display = "none";
+
         document.getElementById('text').innerHTML = "Great! Now we just need you to confirm the booking request!";
     }  else if (step4.style.display == "block") {
-        //alert("From step 3 to step 4");
+        //alert("From step 4 to step 5");
         setSessionDate();
         setFromTime();
         setToTime();
         step4.style.display = "none";
         step5.style.display = "block";
+        submit_btn.style.display = "block";
+        next_btn.style.display = "none";
         
         document.getElementById('text').innerHTML = "Great! Now we just need you to confirm the booking request!"
     }  else {
@@ -339,12 +345,14 @@ function next() {
 
 function back() {
     var back_btn = document.getElementById("back_btn");
-
+    var next_btn = document.getElementById("next_btn");
+    var submit_btn = document.getElementById("submit_btn");
+    
     var step1 = document.getElementById("step1");
     var step2 = document.getElementById("step2");
     var step3 = document.getElementById("step3");
     var step4 = document.getElementById("step4");
-
+    
     if (step2.style.display == "block") {
         step2.style.display = "none";
         step1.style.display = "block";
@@ -362,16 +370,20 @@ function back() {
         step3.style.display = "block"; 
         document.getElementById('text').innerHTML = "Who will be joining in on the fun?";
         
-        //alert("From step 3 to step 2");
+        //alert("From step 4 to step 3");
     } else if (step5.style.display == "block" && lesson.type == "Group") {
         step5.style.display = "none";
         step3.style.display = "block"; 
-        //alert("From step 4 to step 2");
+        next_btn.style.display = "block";
+        submit_btn.style.display = "none"; 
+        //alert("From step 5 to step 3");
     } else if (step5.style.display == "block" && lesson.type == "Private") {
         step5.style.display = "none";
         step4.style.display = "block"; 
+        next_btn.style.display = "block";
+        submit_btn.style.display = "none";
         document.getElementById('text').innerHTML = "When would you like to have your lessons?";
-        //alert("From step 4 to step 3");
+        //alert("From step 5 to step 4");
     } 
 
     

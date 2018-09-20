@@ -41,7 +41,7 @@
 
     <form action="email.php" method="post">
     
-        <!-- STEP 1 -->
+    <!-- JUMBOBAR
     <section id="jumbobar">
         <h4>Product</h4>
         <div class="row-three" style="position: relative";>
@@ -91,7 +91,8 @@
             </div>
         </div>
     </section>
-
+    -->
+    
     <!-- STEP 1 -->
     <section id="step1">
         <h4>Product</h4>
@@ -765,16 +766,16 @@
     
     <section>
         <div class="center">
-            <a class="btn submit_btn" id="submit_btn" onclick="next()">Submit</a>
+            
         </div>
     </section>
    
     <section>
         <a class="btn back_btn" id="back_btn" onclick="back()">Back</a>
         <a class="btn next_btn" id="next_btn" onclick="next()">Next</a>
+        <button class="btn submit_btn" id="submit_btn" type="submit" name="submit">Submit</Button>
     </section>
 
-    <button type="submit" name="submit"></button>
     </form>
 
     <!-- Jquery -->

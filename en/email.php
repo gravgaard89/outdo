@@ -199,9 +199,26 @@
         echo "<br>";
     }
 
-    echo "<h1>Thank you for the request</h1> <p>We will get back to you within 3-4 working days to confirm the booking</p>"
+    echo "<h1>Thank you for the request</h1> <p>We will get back to you within 3-4 working days to confirm the booking</p>";
 
+    
+    
+    $to = "admin@outdo.at";
+    $subject = "$service";
 
-    // send email
-    mail("admin@outdo.at","Booking", $service);
+    // the message -- Doesnt work like below
+    //$message = $service;
+    //$message .= $persons;
+    //$message .= $sessions;
+
+    // Always set content-type when sending HTML email
+    $headers = "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+
+    // More headers
+    $headers .= 'From: <webmaster@example.com>' . "\r\n";
+    $headers .= 'Cc: myboss@example.com' . "\r\n";
+
+    mail($to,$subject,$cMail,$headers);
+    
 ?>

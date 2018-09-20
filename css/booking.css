@@ -135,6 +135,7 @@ select {
     padding-left: 12px;
     width: 100%;
     border: none;
+    color: white;
     /* border-bottom: 1px solid #757575; */
     height: 50px;
     -webkit-appearance: none;
@@ -275,13 +276,15 @@ select:valid~label {
 }
 
 .submit_btn {
-    color: #ff00ea;
+    color: #0e7cf4;
     margin: 0 auto;
+    display: none;
+    float: right;
 }
 
 .submit_btn:hover {
     color: white;
-    background-color: #ff00ea;
+    background-color: #0e7cf4;
     ;
 }
 
