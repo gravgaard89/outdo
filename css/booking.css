@@ -1,10 +1,13 @@
-#step1, #step2, #step3, #step4 {
+#step1,
+#step2,
+#step3,
+#step4 {
     padding-top: 0;
 }
 
 h1 {
-    text-align: center; 
-    padding-top: 100px; 
+    text-align: center;
+    padding-top: 100px;
     font-size: 60px;
 }
 
@@ -17,7 +20,7 @@ h1 {
 
 .input-group {
     position: relative;
-    
+
 }
 
 input[type=radio] {
@@ -29,11 +32,13 @@ input[type=radio] {
     height: 20px;
     -webkit-appearance: radio;
     -moz-appearance: radio;
-    -webkit-box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.0);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-    -moz-box-shadow:    5px 5px 20px 5px rgba(0,0,0,0.0);  /* Firefox 3.5 - 3.6 */
+    -webkit-box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.0);
+    /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.0);
+    /* Firefox 3.5 - 3.6 */
     background-color: white;
 
-} 
+}
 
 
 
@@ -53,7 +58,7 @@ input[type=radio] {
 }
 
 .radio p {
-    margin: 0; 
+    margin: 0;
     font-weight: bold;
 }
 
@@ -91,12 +96,12 @@ input[type=radio] {
 }
 
 /* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
+.container:hover input~.checkmark {
     background-color: #ccc;
 }
 
 /* When the radio button is checked, add a blue background */
-.container input:checked ~ .checkmark {
+.container input:checked~.checkmark {
     background-color: #2196F3;
 }
 
@@ -108,41 +113,45 @@ input[type=radio] {
 }
 
 /* Show the indicator (dot/circle) when checked */
-.container input:checked ~ .checkmark:after {
+.container input:checked~.checkmark:after {
     display: block;
 }
 
 /* Style the indicator (dot/circle) */
 .container .checkmark:after {
- 	top: 9px;
-	left: 9px;
-	width: 8px;
-	height: 8px;
-	border-radius: 50%;
-	background: white;
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
 }
 
 
 
-input, select { 
+input,
+select {
     font-size: 18px;
     padding-left: 12px;
     width: 100%;
     border: none;
     /* border-bottom: 1px solid #757575; */
     height: 50px;
-    -webkit-appearance:none;
-    -moz-appearance:none;
-    -webkit-box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.10);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-    -moz-box-shadow:    5px 5px 20px 5px rgba(0,0,0,0.10);  /* Firefox 3.5 - 3.6 */
-    background-color: white;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.10);
+    /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.10);
+    /* Firefox 3.5 - 3.6 */
+    background-color: #2c2c2c;
 }
 
 .radio label {
     pointer-events: all
 }
 
-input:focus, select:focus  {
+input:focus,
+select:focus {
     outline: none;
 }
 
@@ -159,14 +168,14 @@ label {
     -webkit-transition: 0.2s ease all;
 }
 
-input:focus ~ label,
-input:valid ~ label,
-select:focus ~ label,
-select:valid ~ label{
+input:focus~label,
+input:valid~label,
+select:focus~label,
+select:valid~label {
     top: -25px;
     left: 0px;
     font-size: 14px;
-    color: #0178bc;
+    color: #fff;
     font-weight: bold;
 }
 
@@ -176,7 +185,7 @@ select:valid ~ label{
     margin: 20px auto;
 }
 
-#finish input  {
+#finish input {
     background-color: #f16334;
     color: #fff;
     text-decoration: none;
@@ -184,23 +193,46 @@ select:valid ~ label{
     border-radius: 20px;
     white-space: normal;
     height: 50px;
-     -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-    -moz-box-shadow:    0px 0px 10px 0px rgba(0,0,0,0.25);  /* Firefox 3.5 - 3.6 */
-    box-shadow:         0px 0px 10px 0px rgba(0,0,0,0.25);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    /* Firefox 3.5 - 3.6 */
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
 
 /* animations */
 @-webkit-keyframes inputHighlighter {
-    from { background: #0178bc; }
-    to   { width: 0; background: transparent; }
+    from {
+        background: #0178bc;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
 }
+
 @-moz-keyframes inputHighlighter {
-    from { background: #0178bc; }
-    to   { width: 0; background: transparent; }
+    from {
+        background: #0178bc;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
 }
+
 @keyframes inputHighlighter {
-    from { background: #0178bc; }
-    to   { width: 0; background: transparent; }
+    from {
+        background: #0178bc;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
 }
 
 
@@ -208,12 +240,12 @@ select:valid ~ label{
     font-size: 18px;
     font-weight: bold;
     padding: 20px 50px;
-    border: 3px solid; 
+    border: 3px solid;
     border-radius: 50px;
     background-color: white;
 }
 
-.btn:hover{
+.btn:hover {
     cursor: pointer;
     transition: background-color 0.5s ease;
 }
@@ -225,7 +257,7 @@ select:valid ~ label{
 
 .back_btn:hover {
     color: white;
-    background-color: #ca6565; 
+    background-color: #ca6565;
 }
 
 #back_btn {
@@ -249,37 +281,39 @@ select:valid ~ label{
 
 .submit_btn:hover {
     color: white;
-    background-color:#ff00ea;;
+    background-color: #ff00ea;
+    ;
 }
 
 /* ----- Booking ----- */
-@media (max-width: 800px) {    
+@media (max-width: 800px) {
     h1 {
         font-size: 20px;
         padding-top: 20px;
-    } 
-    
+    }
+
     #text {
         text-align: center;
         margin: 20px 0 0 0;
     }
 
-    label { 
-    font-size: 12px;
+    label {
+        font-size: 12px;
     }
-    
-    input, select {
+
+    input,
+    select {
         height: 40px;
     }
-    
+
     #finish {
-    width: 100%;   
+        width: 100%;
     }
-    
+
 }
 
 
-#booking-bar{
+#booking-bar {
     overflow: auto;
 }
 
@@ -287,14 +321,17 @@ select:valid ~ label{
 /* ---------- Details ---------- */
 
 .p-box {
-    overflow: auto; 
+    overflow: auto;
     padding: 30px;
     margin: 30px 0;
     background-color: white;
     border-radius: 10px;
-    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-    -moz-box-shadow:    0px 0px 10px 0px rgba(0,0,0,0.25);  /* Firefox 3.5 - 3.6 */
-    box-shadow:         0px 0px 10px 0px rgba(0,0,0,0.25);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */ 
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    /* Firefox 3.5 - 3.6 */
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
 
 .p-box p {
@@ -304,28 +341,28 @@ select:valid ~ label{
 }
 
 .half {
-        padding-top: 20px;
-    }
+    padding-top: 20px;
+}
 
 @media (max-width: 800px) {
     .p-box p {
-    padding-bottom: 10px;
+        padding-bottom: 10px;
     }
-    
+
     .p-box p {
-    font-weight: bold;
-    margin: 0;
-    padding-bottom: 30px;
-}
-    
+        font-weight: bold;
+        margin: 0;
+        padding-bottom: 30px;
+    }
+
     .third {
         padding-top: 30px;
     }
-    
+
     .radio table {
         padding-top: 10px;
     }
-    
+
 }
 
 
@@ -333,15 +370,18 @@ select:valid ~ label{
 
 
 .c-box {
-    overflow: auto; 
+    overflow: auto;
     padding: 30px;
     margin-top: 30px;
-    margin-bottom:50px;
+    margin-bottom: 50px;
     background-color: white;
     border-radius: 10px;
-    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-    -moz-box-shadow:    0px 0px 10px 0px rgba(0,0,0,0.25);  /* Firefox 3.5 - 3.6 */
-    box-shadow:         0px 0px 10px 0px rgba(0,0,0,0.25);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */ 
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    /* Firefox 3.5 - 3.6 */
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
 
 
@@ -357,9 +397,12 @@ select:valid ~ label{
     background-color: white;
     color: black;
     font-weight: bold;
-    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-    -moz-box-shadow:    0px 0px 10px 0px rgba(0,0,0,0.25);  /* Firefox 3.5 - 3.6 */
-    box-shadow:         0px 0px 10px 0px rgba(0,0,0,0.25);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    /* Firefox 3.5 - 3.6 */
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
 
 
@@ -373,45 +416,45 @@ select:valid ~ label{
 }
 
 
-#scroll-header p{
-    padding-right: 30px;  
+#scroll-header p {
+    padding-right: 30px;
 }
 
 
 @media (min-width: 800px) and (max-width: 1200px) {
-    #scroll-header p{
+    #scroll-header p {
         font-size: 1rem;
     }
-    
+
 }
 
 
 @media (min-width: 600px) and (max-width: 800px) {
-    #scroll-header p{
+    #scroll-header p {
         font-size: 1rem;
     }
-    
+
 }
-    
+
 
 @media (min-width: 400px) and (max-width: 600px) {
-    #scroll-header p{
+    #scroll-header p {
         padding-right: 20px;
         font-size: 0.8rem;
     }
-      
+
 }
 
 @media (max-width: 400px) {
-    #scroll-header p{
+    #scroll-header p {
         padding-right: 10px;
         font-size: 0.7rem;
     }
-          
+
 }
 
 
-#booking h4{
+#booking h4 {
     font-size: 16px;
     padding-top: 0px;
     text-transform: uppercase;
@@ -429,32 +472,50 @@ select:valid ~ label{
 }
 
 .row-three .third:nth-child(2) {
-    padding: 0 30px;  
+    padding: 0 30px;
 }
 
 .row-three .quarter:nth-child(2) {
-    padding: 0 30px;  
+    padding: 0 30px;
 }
 
 .row-three {
-    background-image: linear-gradient(#f8faff,#f6f8fe); padding: 40px 20px; overflow: auto; border-radius: 10px;
+    background-image: repeating-linear-gradient(135deg, #2c2c2c, #2c2c2c 5px, #161616 5px, #161616 10px);
+    border: solid;
+    border-color: white;
+    border-width: 7px;
+    /*background-image: linear-gradient(#f8faff, #f6f8fe);*/
+    padding: 40px 20px;
+    overflow: auto;
+    border-radius: 10px;
 }
 
 @media (max-width: 800px) {
-    
-    .row-two .half:nth-child(1), .row-two .half:nth-child(2) {padding-right: 0px; padding-left: 0px;}
-    .row-three .third:nth-child(2) {padding: 30px 0 0 0;}  
-    .row-three .quarter:nth-child(2) {padding: 30px 0 30px 0;}
-    .row-three .quarter:nth-child(1) {padding: 30px 0 0 0;}
-    
+
+    .row-two .half:nth-child(1),
+    .row-two .half:nth-child(2) {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+    .row-three .third:nth-child(2) {
+        padding: 30px 0 0 0;
+    }
+
+    .row-three .quarter:nth-child(2) {
+        padding: 30px 0 30px 0;
+    }
+
+    .row-three .quarter:nth-child(1) {
+        padding: 30px 0 0 0;
+    }
+
     .radio table td:nth-child(1) {
         padding-right: 20px;
     }
 
     .row-three {
-        background-image: linear-gradient(#f8faff,#f6f8fe); 
-        padding: 10px 20px 20px 20px; 
-        overflow: auto; 
+        padding: 10px 20px 20px 20px;
         border-radius: 10px;
     }
 
@@ -493,9 +554,9 @@ select:valid ~ label{
 
 /* ---------- STEP 4 ---------- */
 #checkout {
-    background-image: linear-gradient(#f8faff,#f4f7fd); 
-    padding: 20px 20px 20px 20px; 
-    overflow: auto; 
+    background-image: linear-gradient(#f8faff, #f4f7fd);
+    padding: 20px 20px 20px 20px;
+    overflow: auto;
     border-radius: 10px;
 }
 
@@ -525,18 +586,11 @@ select:valid ~ label{
     float: left;
 }
 
-#checkout #persontable td:nth-child(1) {
-    
-    
-}
+#checkout #persontable td:nth-child(1) {}
 
-#checkout #persontable td:nth-child(2) {
-    
-}
+#checkout #persontable td:nth-child(2) {}
 
-#checkout #persontable td:nth-child(3) {
-    
-}
+#checkout #persontable td:nth-child(3) {}
 
 
 
@@ -545,9 +599,11 @@ select:valid ~ label{
     padding: 20px;
     margin-top: 10px;
     border-radius: 10px;
-    -webkit-appearance:none;
-    -webkit-box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.10);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-    -moz-box-shadow:    5px 5px 20px 5px rgba(0,0,0,0.10);  /* Firefox 3.5 - 3.6 */
+    -webkit-appearance: none;
+    -webkit-box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.10);
+    /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.10);
+    /* Firefox 3.5 - 3.6 */
 
 }
 
@@ -563,6 +619,4 @@ select:valid ~ label{
     width: 100%;
 }
 
-@media (min-width: 800px) {
-    
-}
+@media (min-width: 800px) {}

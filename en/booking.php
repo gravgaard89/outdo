@@ -41,9 +41,60 @@
 
     <form action="email.php" method="post">
     
+        <!-- STEP 1 -->
+    <section id="jumbobar">
+        <h4>Product</h4>
+        <div class="row-three" style="position: relative";>
+        <img src="../ill/skier.png" style="position: absolute; z-index:1; height: 120px; bottom: 0; left: 0; margin-left: -80px;">
+            <div class="third">
+                <div class="input-group">
+                    <select id="service" onchange="setType()" onchange name="service">
+                        <option></option>
+                        <option>Kids Ski School</option>
+                        <option>Private Ski Lesson</option>
+                        <option>Private Snowboard Lesson</option>
+                    </select>
+                    <label>Lesson type</label>
+                </div>
+            </div>
+            <div class="third">
+                <div class="input-group">
+                    <select id="persons" onchange="setPersons()" name="persons">
+                        <option></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <label>Persons</label>
+                </div>
+            </div>
+            <div class="third" id="sessionsdiv">
+                <div class="input-group">
+                    <select id="sessions" onchange="setSessions()" name="sessions">
+                        <option></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <label>Sessions</label>
+                </div>
+            </div>
+            <div class="third" id="datediv">
+                <div class="input-group">
+                    <input autocomplete="off" id="date" class="sundaypicker" onchange="setDate()" name="date">
+                    <label>Date</label>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- STEP 1 -->
     <section id="step1">
-        <h4>Products</h4>
+        <h4>Product</h4>
         <div class="row-three">
             <div class="third">
                 <div class="input-group">
