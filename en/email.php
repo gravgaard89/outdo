@@ -72,50 +72,40 @@
     }
 
     echo  "<h1>Booking request</h1>";
-    echo  $service; 
-    echo "<br>";
+    echo  $service . "<br>"; 
     
     if ($persons == 1) {
-        echo $persons . " person"; 
-        echo "<br>";
+        echo $persons . " person <br>"; 
     } else {
-        echo $persons . " persons"; 
-        echo "<br>";
+        echo $persons . " persons <br>"; 
     }
     
     if ($sessions == 1) {
-        echo $sessions . " session"; 
-        echo "<br>";
+        echo $sessions . " session <br>"; 
     } else if ($sessions > 1){
-        echo $sessions . " sessions"; 
-        echo "<br>";
+        echo $sessions . " sessions <br>"; 
     }
 
     if ($group) {
-        echo "Date: " . $date;
-        echo "<br>";
+        echo "Date: " . $date . "<br>";
     } 
 
     if ($private) {
 
         if($sessions > 0) {
-            echo $sd1 . "" . $ft1 . " - " . $tt1; 
-            echo "<br>";
+            echo $sd1 . "" . $ft1 . " - " . $tt1 . "<br>"; 
         }
 
         if($sessions > 1) {
-            echo $sd2 . "    " . $ft2 . " - " . $tt2; 
-            echo "<br>";
+            echo $sd2 . "    " . $ft2 . " - " . $tt2 . "<br>"; 
         }
 
         if($sessions > 2) {
-            echo $sd3 . "    " . $ft3 . " - " . $tt3; 
-            echo "<br>";
+            echo $sd3 . "    " . $ft3 . " - " . $tt3 . "<br>"; 
         }
         
         if($sessions > 3) {
-            echo $sd4 . "    " . $ft4 . " - " . $tt4; 
-            echo "<br>";
+            echo $sd4 . "    " . $ft4 . " - " . $tt4 . "<br>"; 
         }
 
         if($sessions > 4) {
@@ -132,93 +122,198 @@
     } 
 
     echo "<h1>Contact details</h1>";
-    echo $cName;
-    echo "<br>";
-    echo $cPhone;
-    echo "<br>";
-    echo $cMail;
+    echo $cName . "<br>";
+    echo $cPhone . "<br>";
+    echo $cMail . "<br>";
 
     echo "<h1>Participants</h1>";
 
-    if($persons > 0 ){
-        echo $pn1;
-        echo "<br>";
-        echo $pa1;
-        echo "<br>";
-        echo $pl1;
-        echo "<br>";
-        echo $pd1;
-        echo "<br>";
+    if($persons > 0 ) {
+        echo $pn1 . "<br>";
+        echo $pa1 . "<br>";
+        echo $pl1 . "<br>";
+        echo $pd1 . "<br><br>"; 
     }
     
-    if($persons > 1 ){
-        echo "<br>";
-        echo $pn2;
-        echo "<br>";
-        echo $pa2;
-        echo "<br>";
-        echo $pl2;
-        echo "<br>";
-        echo $pd2;
-        echo "<br>";
+    if($persons > 1 ) {
+        echo $pn2 . "<br>";
+        echo $pa2 . "<br>"; 
+        echo $pl2 . "<br>"; 
+        echo $pd2 . "<br><br>";
     }
 
     if($persons > 2 ) {
-        echo "<br>";
-        echo $pn3;
-        echo "<br>";
-        echo $pa3;
-        echo "<br>";
-        echo $pl3;
-        echo "<br>";
-        echo $pd3;
-        echo "<br>";
+        echo $pn3 . "<br>";
+        echo $pa3 . "<br>"; 
+        echo $pl3 . "<br>";
+        echo $pd3 . "<br><br>";
     }
 
     if($persons > 3 ) {
-        echo "<br>";
-        echo $pn4;
-        echo "<br>";
-        echo $pa4;
-        echo "<br>";
-        echo $pl4;
-        echo "<br>";
-        echo $pd4;
-        echo "<br>";
+        echo $pn4 . "<br>";
+        echo $pa4 . "<br>";
+        echo $pl4 . "<br>";
+        echo $pd4 . "<br><br>";
     }
 
     if($persons > 4 ) {
-        echo "<br>";
-        echo $pn5;
-        echo "<br>";
-        echo $pa5;
-        echo "<br>";
-        echo $pl5;
-        echo "<br>";
-        echo $pd5;
-        echo "<br>";
+        echo $pn5 . "<br>";
+        echo $pa5 . "<br>";
+        echo $pl5 . "<br>";
+        echo $pd5 . "<br><br>";
     }
 
     echo "<h1>Thank you for the request</h1> <p>We will get back to you within 3-4 working days to confirm the booking</p>";
+    
+    
 
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+    echo  "<h1>Booking request</h1>";
+    echo  $service . "<br>"; 
     
+    if ($persons == 1) {
+        echo $persons . " person <br>"; 
+    } else {
+        echo $persons . " persons <br>"; 
+    }
     
+    if ($sessions == 1) {
+        echo $sessions . " session <br>"; 
+    } else if ($sessions > 1){
+        echo $sessions . " sessions <br>"; 
+    }
+
+    if ($group) {
+        echo "Date: " . $date . "<br>";
+    } 
+
+    if ($private) {
+
+        if($sessions > 0) {
+            echo $sd1 . "" . $ft1 . " - " . $tt1 . "<br>"; 
+        }
+
+        if($sessions > 1) {
+            echo $sd2 . "    " . $ft2 . " - " . $tt2 . "<br>"; 
+        }
+
+        if($sessions > 2) {
+            echo $sd3 . "    " . $ft3 . " - " . $tt3 . "<br>"; 
+        }
+        
+        if($sessions > 3) {
+            echo $sd4 . "    " . $ft4 . " - " . $tt4 . "<br>"; 
+        }
+
+        if($sessions > 4) {
+            echo $sd5 . "    " . $ft5 . " - " . $tt5;
+        }
+
+        //set Participants days to 0
+        $pd1 = "";
+        $pd2 = "";
+        $pd3 = "";
+        $pd4 = "";
+        $pd5 = "";
+
+    } 
+
+
+/////////////////////////////////////////////////////////////////////////
+
     $to = "admin@outdo.at";
     $subject = "$service";
 
-    // the message -- Doesnt work like below
-    //$message = $service;
-    //$message .= $persons;
-    //$message .= $sessions;
+    //the message     
+    
+    $eHeader = "<h1>Booking request</h1> From: " . $cName . "<br>" . $service . "<br>" . $persons . " Persons <br>";
+
+    if($group) {
+        $eDate = "Date: " . $date;
+    }
+
+    if($private) {
+        $eSessions = "<br><h1>Sessions</h1>";
+        
+        if($sessions > 0) {
+            $eSessions .= $sd1 . "" . $ft1 . " - " . $tt1 . "<br>"; 
+        }
+
+        if($sessions > 1) {
+            $eSessions .= $sd2 . "    " . $ft2 . " - " . $tt2 . "<br>"; 
+        }
+
+        if($sessions > 2) {
+            $eSessions .= $sd3 . "    " . $ft3 . " - " . $tt3 . "<br>"; 
+        }
+        
+        if($sessions > 3) {
+            $eSessions .= $sd4 . "    " . $ft4 . " - " . $tt4 . "<br>"; 
+        }
+
+        if($sessions > 4) {
+            $eSessions .= $sd5 . "    " . $ft5 . " - " . $tt5;
+        }
+
+        //set Participants days to 0
+        $pd1 = "";
+        $pd2 = "";
+        $pd3 = "";
+        $pd4 = "";
+        $pd5 = "";
+    } else {
+        $eSessions = "";
+    }
+
+    $eContact = "<br><h1>Contact details</h1>" . $cName . "<br>" . $cPhone . "<br>" .  $cMail;
+
+    $eParticipants = "<br><h1>Participants</h1>";
+    if($persons > 0 ) {
+        $eParticipants .= $pn1 . "<br>" . $pa1 . "<br>" . $pl1 . "<br>" . $pd1 . "<br><br>"; 
+    }
+    
+    if($persons > 1 ) {
+        $eParticipants .= $pn2 . "<br>" . $pa2 . "<br>" . $pl2 . "<br>" . $pd2 . "<br><br>"; 
+    }
+
+    if($persons > 2 ) {
+        $eParticipants .= $pn3 . "<br>" . $pa3 . "<br>" . $pl3 . "<br>" . $pd3 . "<br><br>"; 
+    }
+
+    if($persons > 3 ) {
+        $eParticipants .= $pn4 . "<br>" . $pa4 . "<br>" . $pl4 . "<br>" . $pd4 . "<br><br>"; ;
+    }
+
+    if($persons > 4 ) {
+        $eParticipants .= $pn5 . "<br>" . $pa5 . "<br>" . $pl5 . "<br>" . $pd5 . "<br><br>"; 
+    }
+    
+
+    
+
+    $message = $eHeader  . $eContact . $eParticipants . $eSessions; 
 
     // Always set content-type when sending HTML email
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
     // More headers
-    $headers .= 'From: <webmaster@example.com>' . "\r\n";
-    $headers .= 'Cc: myboss@example.com' . "\r\n";
+    //$headers .= $cMail . "\r\n";
+    //$headers .= 'Cc: myboss@example.com' . "\r\n";
 
-    mail($to,$subject,$cMail,$headers);
+    $result = mail($to,$subject,$message,$headers);
+    var_dump($result);
     
 ?>
