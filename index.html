@@ -16,7 +16,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/w3.css">
     <link rel="stylesheet" type="text/css" href="css/global.css">
 
@@ -28,12 +28,11 @@
 
 
 <body id="index">
-    <!-- Logo -->
+    <!-- Logo 
     <a href="https://outdo.at/"><img class="logo" alt="logo" src="https://outdo.at/ill/outdo_logo_100px.png"></a>
-
-    <!-- Header -->
+    -->
+    <!-- Header 
     <header>
-        <!-- Navbar (sit on top) -->
         <div id="navbar">
             <i class="hamburger w3-hide-medium w3-hide-large fa fa-2x fa-bars" onclick="w3_open()"></i>
             <a href="https://outdo.at/en/ski_private.html" class="w3-hide-small">Ski</a>
@@ -43,24 +42,62 @@
             <a href="#about" class="w3-hide-small">About</a>
         </div>
     </header>
+    -->
+    <!-- Header -->
+    <header>
+        
+        <nav>
+            <ul>
+                <li>Ski</li>
+                <li>Snowboard</li>
+                <li>Kids</li>
+                <li><a href="https://outdo.at/"><img alt="logo" style="height: 50px;" src="https://outdo.at/ill/outdo_logo_100px.png"></a></li>
+                <li>Pricing</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
 
+        
+
+    <div class="burger">
+        <i class="fas show"><img src="ill/burger.png"></i>
+        <i class="fas "><img src="ill/cross.png"></i>
+    </div>
+
+    <div class="language">
+        <a href="#language"><img src="ill/language/uk.PNG"></a>
+    </div>
+            
 
     <!---------- Sidebar ---------->
+    <aside>
+        <nav>
+            <ul>
+                <li><a href="https://outdo.at/en/ski_private.html">Ski</a></li>
+                <li><a href="https://outdo.at/en/snowboard_private.html">Snowboard</a></li>
+                <li><a href="https://outdo.at/en/kids_ski_school.html">Kids</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#language"><img src="ill/language/uk.PNG"></a></li>
+            </nav>
+            </ul>
+    </aside>
+
+    
     <nav class="w3-sidebar w3-black w3-animate-top w3-xxlarge" id="sidebar">
 
         <div class="w3-bar-block w3-center">
-            <a href="https://outdo.at/en/ski_private.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Ski</a>
-            <a href="https://outdo.at/en/snowboard_private.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Snowboard</a>
-            <a href="https://outdo.at/en/kids_ski_school.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Kids</a>
-            <a href="#pricing" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Pricing</a>
-            <a href="#about" class="w3-bar-item w3-button w3-text-grey w3-hover-black">About</a>
-
+            
             <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-black w3-xxlarge w3-padding" style="padding:6px 24px">
                 <i class="fa fa-remove"></i>
             </a>
         </div>
     </nav>
-
+    
+    
+    
 
     <!-- Hero with full-height image -->
     <div class="bg-img w3-display-container" id="hero">
@@ -690,7 +727,10 @@
     </div>
 
     <!-- JavaScript -->
-
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
     <!-- load javascript after page has loaded -->
     <script>
         function downloadJSAtOnload() {
@@ -724,6 +764,12 @@
         }
     </script>
 
+    <script>
+        $('.burger').on('click', function() {
+        $('.fas, aside').toggleClass('show');
+        })
+    </script>
+    
 
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLW8T60mPutuU14aNdgEL6jDqL3iPtEY0&callback=myMap"></script>

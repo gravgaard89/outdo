@@ -9,5 +9,5 @@ function w3_close() {document.getElementById("sidebar").style.display = "none";}
 // Change style of navbar on scroll
 window.onscroll = function() {myFunction()};
 function myFunction() {var header = document.getElementById("navbar");if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {header.className = " animate-top" + " dark";} else {header.className = header.className.replace(" animate-top dark", "");}}
-            
+
             

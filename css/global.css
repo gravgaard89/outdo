@@ -1,17 +1,9 @@
-
 /* ----- GLOBAL ----- */
 body, header, h1,h2,h3,h4,h5,h6,p {font-family: 'Poppins', sans-serif;}
 
 html #index {
     line-height: 1.5;
-    background: repeating-linear-gradient(
-        45deg,
-        #2e2e2e,
-        #000000 10px,
-        #000000 10px,
-        #1f1f21 15px
-    );
-    
+    background-image: repeating-linear-gradient(135deg, #000, #000 5px, #121212 5px, #121212 10px);
 }
 
 .pv20 {
@@ -366,12 +358,6 @@ header {
 
 @media (min-width:600px) and (max-width:1400px) {
     
-    .logo {
-    transform: translateX(0%);
-    left: 50px;
-    
-    }
-
     #navbar {
         padding-right: 50px;
     }
