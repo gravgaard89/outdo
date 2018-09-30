@@ -63,6 +63,10 @@ header nav ul li:nth-child(4) {
     padding: 0 60px;    
 }
 
+header nav ul li img {
+    height: 50px;
+}
+
 
 .navicons {
     position: absolute;
@@ -87,7 +91,6 @@ header nav ul li:nth-child(4) {
     left: 50px;
     color: #333;
     cursor: pointer;
-
 }
 
 .burger img {
@@ -226,7 +229,6 @@ aside.show {
         text-transform: uppercase; 
     }
 
-
     .burger {
         left: 20px;
     }
@@ -235,6 +237,9 @@ aside.show {
         display: none;
     }
 
+    aside nav ul  {
+        margin-top: 100px;
+    }
     
 }
 
@@ -243,6 +248,28 @@ aside.show {
         display: none;
     }
     
+    .navicons {
+        display: none;
+    }
+
+    header nav ul li img {
+        height: 30px;
+    }
+
+    header nav ul li:nth-child(4) {
+        padding: 10px 0;    
+    }
+
+    .burger {
+        top: 15px;
+        
+    }
+
+    .burger img {
+        height: 20px;
+    }
+
+
 }
 
 
@@ -2469,7 +2496,78 @@ margin-bottom: 0;
 }
     
  
+/* ----- REAL FOOTER ----- */
+footer {
+    color: white;
+    background-color: #161616;
+    min-height: 450px;
+    padding-top: 5%;
+}
+
+footer ul {
+    margin-top: 3px;
+    padding-inline-start: 0px; 
+}
+
+@media (min-width: 1000px) {
+
+    footer .section div:nth-child(-n+3) {
+        display: inline-block;
+        vertical-align:top;
+        padding-right: 50px;
+    }
+
+    footer .contact {
+        float: right;    
+    }
+
+
+    footer table:nth-child(2) {
+        margin: 20px 0;
+    }
+
+    footer .contact table p {
+        margin: 5px;
+        padding-left: 20px;
+    }
+
+}
+
+
+
+
+
+
+footer ul li {
+   font-size: 15px;
+   padding: 5px 0; 
+}
+
+footer ul li:nth-child(1) {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+ 
+ }
     
+ @media (max-width: 1000px) {
+    footer .section div {
+        display: block;
+        margin: 50px auto;
+        text-align: center;
+    }
+
+    footer .section table td {
+        display: block;
+    }
+
+    footer .section table { 
+        margin: 50px auto;
+    }
+   
+
+ }
+
     
     
 /* ----- FOOTER ----- */

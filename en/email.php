@@ -210,15 +210,19 @@
         echo '<p style="text-align: center">'.$persons.' persons</p>'; 
     }
 
-    if ($sessions == 1) {
-        echo '<p style="text-align: center">'.$sessions.' session</p>';; 
-    } else if ($sessions > 1){
-        echo '<p style="text-align: center">'.$sessions.' sessions</p>'; 
-    }
 
+    if($private){
+        if ($sessions == 1) {
+            echo '<p style="text-align: center">'.$sessions.' session</p>';; 
+        } else if ($sessions > 1){
+            echo '<p style="text-align: center">'.$sessions.' sessions</p>'; 
+        }
+    }
+    
     if ($group) {
         echo '<p style="text-align: center">Date: '.$date.' </p>';
     } 
+
 
     if ($private) {
 
@@ -253,7 +257,7 @@
     } 
 
 
-        $to = "admin@outdo.at";
+        $to = "booking@outdo.at";
         $subject = "$service";
     
         //the message     
@@ -261,7 +265,7 @@
         $eHeader = "<h1>Booking request</h1> From: " . $cName . "<br>" . $service . "<br>" . $persons . " Persons <br>";
     
         if($group) {
-            $eDate = "Date: " . $date;
+            $eHeader .= $date . "<br>";
         }
     
         if($private) {
