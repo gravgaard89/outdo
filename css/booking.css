@@ -483,7 +483,7 @@ select:valid~label {
 }
 
 .row-three {
-    background-image: repeating-linear-gradient(135deg, #2c2c2c, #2c2c2c 5px, #161616 5px, #161616 10px);
+    background-image: repeating-linear-gradient(135deg, #2c2c2c, #2c2c2c 3px, #161616 3px, #161616 6px);
     border: solid;
     border-color: white;
     border-width: 7px;
@@ -621,5 +621,18 @@ select:valid~label {
 #checkout img {
     width: 100%;
 }
+
+.ghost-red {
+     
+}
+
+.ghost-red:hover {
+    color: white;
+}
+
+.ghost-red:focus {
+    color: white;
+}
+
 
 @media (min-width: 800px) {}

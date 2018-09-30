@@ -63,7 +63,8 @@ function setType() {
         document.getElementById("ptt3").innerHTML = "15:00";
         document.getElementById("ptt4").innerHTML = "15:00";
         document.getElementById("ptt5").innerHTML = "15:00";
-        
+          
+        document.getElementById("days-header").innerHTML = "days";
         document.getElementById("print-sessions").style.display = "none";
         document.getElementById("sessions-header").innerHTML = "Days of ski school";
     }
@@ -92,7 +93,7 @@ function setType() {
         document.getElementById("psd4").innerHTML = "";
         document.getElementById("psd5").innerHTML = ""; 
         
-        
+        document.getElementById("days-header").innerHTML = "";
         document.getElementById("print-sessions").style.display = "block";
     }
     
@@ -227,6 +228,7 @@ function setDays() {
     
     for (i = 1; i <= lesson.size; i++) {
         if (lesson.type == "Group") {
+            
             if (document.getElementById("r" + i).checked) {
                 person[i].days = "3 days";
             } else {
@@ -236,7 +238,6 @@ function setDays() {
         } else if (lesson.type == "Private") {
             delete person[i].days;
             document.getElementById("pd" + i).innerHTML = "";
-            document.getElementById("days-header").innerHTML = "";
         }
         
     }

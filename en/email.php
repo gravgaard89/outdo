@@ -70,7 +70,8 @@
         $group = false;
         $private = true; 
     }
-
+    
+/*
     echo  "<h1>Booking request</h1>";
     echo  $service . "<br>"; 
     
@@ -162,13 +163,7 @@
         echo $pl5 . "<br>";
         echo $pd5 . "<br><br>";
     }
-
-    echo "<h1>Thank you for the request</h1> <p>We will get back to you within 3-4 working days to confirm the booking</p>";
-    
-    
-
-
-
+*/
 
 
 
@@ -176,49 +171,76 @@
 /////////////////////////////////////////////////////////////////////////
 
 
+/////////////////////////////////////////////////////////////////////////
 
+    
+    
+    
+?>
 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
 
+        <link rel="stylesheet" type="text/css" href="../css/global.css">
+        <link rel="stylesheet" type="text/css" href="../css/booking.css">
+        <link rel="stylesheet" type="text/css" href="../css/w3.css">
+        <link rel="stylesheet" type="text/css" href="../css/global.css">
+    </head>
+    <body>
+    <h2 style="text-align: center; padding-top: 100px;">
+        Thank you for the request 
+    </h2>
+    
+    <p style="text-align: center">We will get back to you within 3-4 working days to confirm the booking. <br> A copy of the request has been sent to your email</p>
 
-    echo  "<h1>Booking request</h1>";
-    echo  $service . "<br>"; 
+    <h2 style="text-align: center; padding-top: 50px;">Booking request</h2>
+    
+    <?php 
+    
+    echo '<p style="text-align: center">'.$service.'</p>';
     
     if ($persons == 1) {
-        echo $persons . " person <br>"; 
+        echo '<p style="text-align: center">'.$persons.' person</p>'; 
     } else {
-        echo $persons . " persons <br>"; 
+        echo '<p style="text-align: center">'.$persons.' persons</p>'; 
     }
-    
+
     if ($sessions == 1) {
-        echo $sessions . " session <br>"; 
+        echo '<p style="text-align: center">'.$sessions.' session</p>';; 
     } else if ($sessions > 1){
-        echo $sessions . " sessions <br>"; 
+        echo '<p style="text-align: center">'.$sessions.' sessions</p>'; 
     }
 
     if ($group) {
-        echo "Date: " . $date . "<br>";
+        echo '<p style="text-align: center">Date: '.$date.' </p>';
     } 
 
     if ($private) {
 
         if($sessions > 0) {
-            echo $sd1 . "" . $ft1 . " - " . $tt1 . "<br>"; 
+            echo '<p style="text-align: center">'.$sd1.' '.$ft1.' - '.$tt1.'</p>'; 
+           
         }
 
         if($sessions > 1) {
-            echo $sd2 . "    " . $ft2 . " - " . $tt2 . "<br>"; 
+            echo '<p style="text-align: center">'.$sd2.' '.$ft2.' - '.$tt2.'</p>'; 
         }
 
         if($sessions > 2) {
-            echo $sd3 . "    " . $ft3 . " - " . $tt3 . "<br>"; 
+            echo '<p style="text-align: center">'.$sd3.' '.$ft3.' - '.$tt3.'</p>';
         }
         
         if($sessions > 3) {
-            echo $sd4 . "    " . $ft4 . " - " . $tt4 . "<br>"; 
+            echo '<p style="text-align: center">'.$sd4.' '.$ft4.' - '.$tt4.'</p>';
         }
 
         if($sessions > 4) {
-            echo $sd5 . "    " . $ft5 . " - " . $tt5;
+            echo '<p style="text-align: center">'.$sd5.' '.$ft5.' - '.$tt5.'</p>';
         }
 
         //set Participants days to 0
@@ -231,90 +253,93 @@
     } 
 
 
-/////////////////////////////////////////////////////////////////////////
-
-    $to = "admin@outdo.at";
-    $subject = "$service";
-
-    //the message     
+        $to = "admin@outdo.at";
+        $subject = "$service";
     
-    $eHeader = "<h1>Booking request</h1> From: " . $cName . "<br>" . $service . "<br>" . $persons . " Persons <br>";
-
-    if($group) {
-        $eDate = "Date: " . $date;
-    }
-
-    if($private) {
-        $eSessions = "<br><h1>Sessions</h1>";
+        //the message     
         
-        if($sessions > 0) {
-            $eSessions .= $sd1 . "" . $ft1 . " - " . $tt1 . "<br>"; 
+        $eHeader = "<h1>Booking request</h1> From: " . $cName . "<br>" . $service . "<br>" . $persons . " Persons <br>";
+    
+        if($group) {
+            $eDate = "Date: " . $date;
         }
-
-        if($sessions > 1) {
-            $eSessions .= $sd2 . "    " . $ft2 . " - " . $tt2 . "<br>"; 
+    
+        if($private) {
+            $eSessions = "<br><h1>Sessions</h1>";
+            
+            if($sessions > 0) {
+                $eSessions .= $sd1 . "" . $ft1 . " - " . $tt1 . "<br>"; 
+            }
+    
+            if($sessions > 1) {
+                $eSessions .= $sd2 . "    " . $ft2 . " - " . $tt2 . "<br>"; 
+            }
+    
+            if($sessions > 2) {
+                $eSessions .= $sd3 . "    " . $ft3 . " - " . $tt3 . "<br>"; 
+            }
+            
+            if($sessions > 3) {
+                $eSessions .= $sd4 . "    " . $ft4 . " - " . $tt4 . "<br>"; 
+            }
+    
+            if($sessions > 4) {
+                $eSessions .= $sd5 . "    " . $ft5 . " - " . $tt5;
+            }
+    
+            //set Participants days to 0
+            $pd1 = "";
+            $pd2 = "";
+            $pd3 = "";
+            $pd4 = "";
+            $pd5 = "";
+        } else {
+            $eSessions = "";
         }
-
-        if($sessions > 2) {
-            $eSessions .= $sd3 . "    " . $ft3 . " - " . $tt3 . "<br>"; 
+    
+        $eContact = "<br><h1>Contact details</h1>" . $cName . "<br>" . $cPhone . "<br>" .  $cMail;
+    
+        $eParticipants = "<br><h1>Participants</h1>";
+        if($persons > 0 ) {
+            $eParticipants .= $pn1 . "<br>" . $pa1 . "<br>" . $pl1 . "<br>" . $pd1 . "<br><br>"; 
         }
         
-        if($sessions > 3) {
-            $eSessions .= $sd4 . "    " . $ft4 . " - " . $tt4 . "<br>"; 
+        if($persons > 1 ) {
+            $eParticipants .= $pn2 . "<br>" . $pa2 . "<br>" . $pl2 . "<br>" . $pd2 . "<br><br>"; 
         }
-
-        if($sessions > 4) {
-            $eSessions .= $sd5 . "    " . $ft5 . " - " . $tt5;
+    
+        if($persons > 2 ) {
+            $eParticipants .= $pn3 . "<br>" . $pa3 . "<br>" . $pl3 . "<br>" . $pd3 . "<br><br>"; 
         }
-
-        //set Participants days to 0
-        $pd1 = "";
-        $pd2 = "";
-        $pd3 = "";
-        $pd4 = "";
-        $pd5 = "";
-    } else {
-        $eSessions = "";
-    }
-
-    $eContact = "<br><h1>Contact details</h1>" . $cName . "<br>" . $cPhone . "<br>" .  $cMail;
-
-    $eParticipants = "<br><h1>Participants</h1>";
-    if($persons > 0 ) {
-        $eParticipants .= $pn1 . "<br>" . $pa1 . "<br>" . $pl1 . "<br>" . $pd1 . "<br><br>"; 
-    }
     
-    if($persons > 1 ) {
-        $eParticipants .= $pn2 . "<br>" . $pa2 . "<br>" . $pl2 . "<br>" . $pd2 . "<br><br>"; 
-    }
-
-    if($persons > 2 ) {
-        $eParticipants .= $pn3 . "<br>" . $pa3 . "<br>" . $pl3 . "<br>" . $pd3 . "<br><br>"; 
-    }
-
-    if($persons > 3 ) {
-        $eParticipants .= $pn4 . "<br>" . $pa4 . "<br>" . $pl4 . "<br>" . $pd4 . "<br><br>"; ;
-    }
-
-    if($persons > 4 ) {
-        $eParticipants .= $pn5 . "<br>" . $pa5 . "<br>" . $pl5 . "<br>" . $pd5 . "<br><br>"; 
-    }
+        if($persons > 3 ) {
+            $eParticipants .= $pn4 . "<br>" . $pa4 . "<br>" . $pl4 . "<br>" . $pd4 . "<br><br>"; ;
+        }
+    
+        if($persons > 4 ) {
+            $eParticipants .= $pn5 . "<br>" . $pa5 . "<br>" . $pl5 . "<br>" . $pd5 . "<br><br>"; 
+        }
+        
     
 
+        
     
-
-    $message = $eHeader  . $eContact . $eParticipants . $eSessions; 
-
-    // Always set content-type when sending HTML email
-    $headers = "MIME-Version: 1.0" . "\r\n";
-    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-
-    // More headers
-    //$headers .= $cMail . "\r\n";
-    //$headers .= 'Cc: myboss@example.com' . "\r\n";
-
-    $result = mail($to,$subject,$message,$headers);
-    var_dump($result);
+        $message = $eHeader  . $eContact . $eParticipants . $eSessions; 
     
+        // Always set content-type when sending HTML email
+        $headers = "MIME-Version: 1.0" . "\r\n";
+        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
     
-?>
+        // More headers
+        //$headers .= $cMail . "\r\n";
+        //$headers .= 'Cc: myboss@example.com' . "\r\n";
+    
+        mail($to,$subject,$message,$headers);
+        /*var_dump($result);*/
+    ?>
+    <div class="center"> 
+        <button ><a href="https://outdo.at/en/booking.html" class="ghost-blue">New booking</a></button> 
+        <button ><a href="https://outdo.at" class="ghost-blue">Back to the main page</a></button> 
+    </div>
+    </body>
+</html>
